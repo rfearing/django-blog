@@ -23,19 +23,19 @@
 	<header class="site-header">
 		<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 			<div class="container">
-				<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Ricardo's Bloggin' Blog</a>
+				<a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Ricardo's Example Blog</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
 					aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarToggle">
 					<div class="navbar-nav mr-auto">
-						<a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
 						<a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
 					</div>
 					<!-- Navbar Right Side -->
 					{% if user.is_authenticated %}
 						<div class="navbar-nav">
+							<a class="nav-item nav-link border rounded" href="{% url 'post-create' %}">Create New Post</a>
 							<a class="nav-item nav-link" href="{% url 'profile' %}">Your Profile</a>
 							<a class="nav-item nav-link" href="{% url 'logout' %}">Log Out</a>
 						</div>
@@ -63,7 +63,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="content-section pb-3">
-					<h3>Blog with your bad self</h3>
+					<h3>Blog on witcha bad self</h3>
 					<img
 						class="w-100"
 						src="https://media0.giphy.com/media/dchERAZ73GvOE/source.gif"
